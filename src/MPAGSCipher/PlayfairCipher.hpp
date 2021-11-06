@@ -43,13 +43,13 @@ class PlayfairCipher {
 
     /// A map from a unique letter in the alphabet to a position on a 5x5 grid
 
-    using LetterToCoord = std::map<char, std::pair<size_t, size_t>>;
-    LetterToCoord letterToCoordsMap;
+    using LetterToCoords = std::map<char, std::pair<size_t, size_t>>;
+    LetterToCoords letterToCoordsMap;
 
     /// A map from a position on a 5x5 grid to a unique letter in the alphabet
 
-    using CoordToLetter = std::map<std::pair<size_t, size_t>, char>;
-    CoordToLetter coordsToLetterMap;
+    using CoordsToLetter = std::map<std::pair<size_t, size_t>, char>;
+    CoordsToLetter coordsToLetterMap;
 
     /// The cipher key, with default set to an empty string
     std::string key_{""};
