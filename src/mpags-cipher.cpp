@@ -1,4 +1,5 @@
 #include "CaesarCipher.hpp"
+#include "PlayfairCipher.hpp"
 #include "CipherMode.hpp"
 #include "CipherType.hpp"
 #include "ProcessCommandLine.hpp"
@@ -99,9 +100,10 @@ int main(int argc, char* argv[])
             break;
         }
         case CipherType::Playfair: {
-            std::cerr << "[warning] Playfair cipher not yet implemented"
-                      << std::endl;
-            outputText = inputText;
+            PlayfairCipher cipher{settings.cipherKey};
+            cipher.setKey(settings.cipherKey);
+            outputText = cipher.applyCipher(inputText, settings.cipherMode);
+            // outputText = inputText;
             break;
         }
     }
