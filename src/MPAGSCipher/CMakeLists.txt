@@ -2,6 +2,8 @@
 
 # - Declare the build of the static MPAGSCipher library
 add_library(MPAGSCipher STATIC
+  PlayfairCipher.hpp
+  PlayfairCipher.cpp
   CaesarCipher.hpp
   CaesarCipher.cpp
   CipherMode.hpp
